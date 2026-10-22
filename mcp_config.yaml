@@ -1,0 +1,19 @@
+name: my-company-mcp
+version: 0.1.0
+protocol: http
+host: localhost
+port: 5001
+endpoints:
+  - path: /complete
+    method: POST
+    description: "Return custom completions for a given prompt"
+    request_schema:
+      type: object
+      properties:
+        prompt:
+          type: string
+    response_schema:
+      type: object
+      properties:
+        completion:
+          type: string
